@@ -1,4 +1,4 @@
-const mysql = require("mysql2");
+const mysql = require('mysql2');
 // const dbConfig = require("../config/db.config");
 // const connection = mysql.createConnection({
 //     host: dbConfig.HOST,
@@ -8,12 +8,11 @@ const mysql = require("mysql2");
 // });
 
 //For PlanetScale
-require('dotenv').config()
-const connection = mysql.createConnection(process.env.DATABASE_URL)
+require('dotenv').config();
+const connection = mysql.createConnection(process.env.DATABASE_URL);
 
-
-connection.connect((error)=>{
-    if(error) console.log("MYSQL connection: " + error);
-    else console.log("Successfully connected to the database");
+connection.connect((error) => {
+  if (error) console.log('MYSQL connection: ' + error);
+  else console.log('Successfully connected to the database');
 });
 module.exports = connection;
