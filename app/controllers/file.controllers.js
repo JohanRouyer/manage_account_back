@@ -21,7 +21,7 @@ const uploadController = async (req, res) => {
 
 const displayAvatar = (req, res) => {
   const filename = req.params.name;
-  const directoryPath = __basedir + '/assets';
+  const directoryPath = __basedir + '/assets/';
   console.log('a:' + directoryPath);
   res.download(directoryPath + filename, filename, (err) => {
     if (err) {
